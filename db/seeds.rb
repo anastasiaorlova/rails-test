@@ -6,5 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#horror movie list
-#two models - User and Movie
+
+users = [
+    {username: "resident trickster"},
+    {username: "elvira_faery"}
+]
+
+users.each do |user|
+    User.create(username: user[:username])
+end 
+
+movies = [
+    {name: "Dracula", user_id: 1},
+    {name: "Interview with the Vampire", user_id: 1},
+    {name: "Get Out", user_id: 2}
+]
+
+movies.each do |movie|
+    Movie.create(name: movie[:name], user_id: movie[:user_id])
+end 
+
