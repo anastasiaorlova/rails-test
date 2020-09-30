@@ -1,0 +1,14 @@
+<header>
+<h1>LIST OF USERS</h1>
+</header>
+
+
+<section id="info">
+    <body>
+    <% @users.each do |user| %>
+    <%= user.username %>
+    <br>
+    <br>
+    <% end %> 
+    </body>
+    </section>
